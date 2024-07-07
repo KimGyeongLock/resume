@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>이력서</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://statics.goorm.io" crossorigin="anonymous" />
+        <link rel="preload" as="style" crossorigin href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css" />
+        <link rel="stylesheet" href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css" />
+    </head>
+    <body>
+        <header>
+            <a href="./index.html" class="header-link">
+                <h1>Roki Kim</h1>
+                <h5>개발의 가치를 전달하는 개발자</h5>
+            </a>
+        </header>
+        <main>
+            <div class="profile">
+                <img src="./assets/profile.jpg" alt="Roki Kim">
+            </div>
+            <div class="info">
+                <p class="intro">안녕하세요,<br>소프트웨어 개발자 <span>김경록</span>입니다.</p>
+                <p>📞 Number: 010-8079-5427</p>
+                <p>📧 Email: 21900064@handong.ac.kr</p>
+                <p>🖥️ Blog: <a href="https://kimgyeonglock.github.io/">Roki Tech Blog</a></p>
+                <p>📑 Portfolio: <a href="./assets/portfolio.pdf">포트폴리오 보기</a></p>
+            </div>
+        </main>
+        <section class="education">
+            <h2>학력</h2>
+            <div class="edu-item">
+                <div class="edu-status">
+                    <h3>대아고등학교</h3>
+                    <p class="status">| 졸업</p>
+                </div>
+                <p class = "date">~ 2019.02</p>
+            </div>
+            <div class="edu-item second-item">
+                <div>
+                    <div class="edu-status">
+                        <h3>한동대학교</h3>
+                        <p class="status">| 재학</p>
+                    </div>
+                    <div class="edu-detail">
+                        <p class="major">AI·컴퓨터공학심화전공</p>
+                        <p class="gpa">GPA <span>4.14</span>/4.5</p>
+                    </div>
+                </div>
+                <p class = "date">2019.03 ~</p>
+            </div>
+        </section>
+        <section class="experience">
+            <h2>경력</h2>
+            <div class="nts">
+                <div>
+                    <div class="nts-status">
+                        <h3>Nein to Sick</h3>
+                        <p class="status">| CTO</p>
+                    </div>
+                    <p class="desc">Startup</p>
+                </div>
+                <p class = "date">2023.06.19 ~ 2024.12</p>
+            </div>
+            <ul class="experience-list">
+               <li>
+                    <div class="contents">
+                        정신건강 관리 어플리케이션 '반디' 개발 및 출시 (aOS, iOS)
+                        <span class="li-date">2023.08.30</span>
+                    </div>
+                    <a href="https://tosto.re/nts_bandi">🔗 플레이스토어 & 앱스토어 링크</a>
+                </li>
+                <li>
+                    <div class="contents">
+                        K-Startup예비창업패키지 지원 선정 (5800만원)
+                        <span class="li-date">2024.04.08</span>
+                    </div>
+                    <a href="http://www.mediagb.kr/news/view.php?idx=34988">🔗 뉴스 링크</a>
+                </li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>프로젝트</h2>
+            <div class="project-item">
+                <h3>배달음식 공동구매 커뮤니티 서비스 앱</h3>
+                <p class = "project-date">2022.12 ~</p>
+            </div>
+            <p>Dart, 네이버 지도 API, 카카오맵 REST API, Firebase</p>
+            <p>Github: <a href="https://github.com/Han-Bab/HanBab">https://github.com/Han-Bab/HanBab</a></p>
+            <ul class="project-details">
+                <li>카카오 맵의 REST API를 사용하여 정보를 검색하고 네이버 지도 API를 사용하여 원하는 근처 음식점을 시각화합니다.</li>
+                <li>'배달의 민족' 애플리케이션과 상호작용하여 채팅방 접근과 온라인 주문을 증가시킵니다.</li>
+                <li>카카오페이와 토스페이를 연동하여 결제 방법의 단순성을 강화합니다.</li>
+            </ul>
+            <div class="project-item">
+                <h3>LLM 기반 일상 감정 관리 앱</h3>
+                <p class = "project-date">2023.08 ~</p>
+            </div>
+            <p>Dart, OpenAI API, Prompt Engineering, Firebase</p>
+            <p>Github: <a href="https://github.com/Nein-to-Sick">https://github.com/Nein-to-Sick</a></p>
+            <ul class="project-details">
+                <li>AI 감정 분석 기능: 인공지능을 사용하여 기록된 감정 상태를 키워드로 요약하는 기능입니다.</li>
+                <li>개인화된 챗봇 기능: 사용자의 과거 기록을 학습한 인공지능으로, 이를 통해 과거의 나와 대화하며 격려하고, 과거 기록을 추천하여 감정 개선을 유도합니다.</li>
+                <li>익명 사용자 간 커뮤니케이션: 사용자가 다른 사람들과 상황을 공유하는 심리적 부담을 줄이고 공감의 응답을 주고받을 수 있습니다.</li>
+        </section>
+        <section class="develop">
+            <h2>개발스택</h2>
+            <table class="stack-table">
+                <!-- <thead>
+                    <tr>
+                        <th>기술 스택</th>
+                        <th>상세</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <td class="stack">Java Spring</td>
+                        <td>
+                            <ul>
+                                <li>Spring의 기본 구조를 이해하고 Controller, Service를 구분하여 사용한다.</li>
+                                <li>RestController와 Controller의 차이를 구별하며 thymeleaf를 사용하여 동적으로 화면을 구성한다.</li>
+                                <li>ajax, JPA를 통해 DB와의 비동기 통신을 구현한다.</li>
+                                <li>DTO를 통해 데이터를 보관하고 전송한다.</li>
+                                <li>Mapper, MyBatis를 통해 보다 디테일한 조회가 가능하다.</li>
+                                <li>Paging, Scrolling을 사용하여 대량의 데이터를 조정한다.</li>
+                                <li>Spring Security를 사용하여 프로그램 내의 보안을 강화한다.</li>
+                            </ul>
+                            <a href="https://kimgyeonglock.github.io/categories/javaSpring">블로그 기록</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stack">JavaScript</td>
+                        <td>
+                            <ul>
+                                <li>요구사항에 적합한 데이터 구조를 선정하고 시간 및 공간 복잡도의 최적화에 신경 쓴다.</li>
+                                <li>고차함수 (map, fill, filter 등)를 사용하며 함수 지향적인 코드를 작성한다.</li>
+                            </ul>
+                            <a href="https://kimgyeonglock.github.io/categories/js">블로그 기록</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stack">Firebase</td>
+                        <td>
+                            <ul>
+                                <li>Authentication 기능을 사용하여 회원가입, 로컬 로그인 뿐만 아니라 소셜 로그인 기능을 구현한다.</li>
+                                <li>SMS 인증번호 받기 기능과 이메일 인증 받기 기능을 통해 앱 접근 보안을 높인다.</li>
+                                <li>Firestore에서 컬렉션, 문서, 필드를 적절히 사용하여 DB를 설계한다.</li>
+                                <li>이미지나 동영상 같은 용량이 큰 데이터의 경우 Storage 기능을 사용한다.</li>
+                                <li>FCM 기능을 사용하여 사용자에게 Notification을 정해진 타이밍에 전달한다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stack">Flutter</td>
+                        <td>
+                            <ul>
+                                <li>Provider, GetX의 상태 관리 매니저를 사용하여 데이터베이스와 앱의 상호작용을 원활하게 한다.</li>
+                                <li>MVC 패턴을 유지하여 유지보수를 편리하게 한다.</li>
+                                <li>pub.dev의 사용가능한 API를 적재적소 사용한다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stack">MySQL</td>
+                        <td>
+                            <ul>
+                                <li>데이터베이스의 크기를 고려하여 데이터를 정규화한다.</li>
+                                <li>쿼리 진행 속도를 고려하여 Indexing, Denormalization을 통해 최적화한다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </body>
+</html>
