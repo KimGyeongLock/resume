@@ -1,0 +1,19 @@
+.goorm-sans-font {
+  font-family: "Goorm Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "Goorm Sans";
+}
+
+.em {
+  font-weight: 700;
+  background: linear-gradient(transparent 60%, rgba(47, 58, 69, 0.12) 60%);
+}
+
+.em-metric {
+  font-weight: 700;
+  background: linear-gradient(transparent 55%, rgba(230, 126, 34, 0.18) 55%);
+}

@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+  body { padding: 0px 10% 10%; }
+}
+
+@media (max-width: 720px) {
+  body { padding: 0px 5% 5%; }
+  main { flex-direction: column; align-items: center; }
+  .profile, .info { width: 100%; padding: 0; }
+  .info { padding-top: 20px; padding-left: 0; }
+  .profile img { width: 50%; }
+
+  .edu-item, .nts, .projects .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-item .date, .nts .date, .projects .project-date { align-self: flex-start; }
+
+  .skill-row { flex-direction: column; gap: 6px; }
+  .skill-key { width: auto; }
+
+  .nts .date { white-space: normal; }
+}
+
+@media (max-width: 480px) {
+  body { padding: 0px 5% 5%; }
+  .profile img { width: 50%; }
+  .info .intro, .info p, .education h2, .edu-item h3, .experience h2, .nts h3, .projects h2, .projects h3 {
+    font-size: smaller;
+  }
+  .projects p, .project-details li { font-size: x-small; }
+}

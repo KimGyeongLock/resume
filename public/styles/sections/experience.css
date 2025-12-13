@@ -1,0 +1,81 @@
+.experience { margin-top: 50px; }
+
+.experience h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* 상단 회사명/기간 정렬 */
+.nts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.nts h3 {
+  font-size: 18px;
+  padding-top: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nts .nts-status {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.nts .status {
+  color: #E7A257;
+  font-size: small;
+  padding-top: 0;
+  padding-left: 0;
+  margin: 0;
+}
+
+.desc { color: #717171; font-size: 13px !important; }
+.nts .desc { margin: 5px 0 0; }
+
+.nts .date {
+  margin: 0;
+  padding-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* 활동 내역 */
+.experience-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.experience-list li {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  font-size: 14px;
+  position: relative;
+}
+
+.experience-list li::before {
+  content: "•";
+  position: absolute;
+  left: -20px;
+}
+
+.experience-list .contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 10px;
+}

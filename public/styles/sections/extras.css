@@ -1,0 +1,32 @@
+.extras { margin-top: 50px; }
+
+.extras h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.extra-block { margin-top: 18px; }
+
+.extra-block h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.extra-block ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.extra-block li { margin: 6px 0; }
+
+.print-note {
+  margin-top: 40px;
+  color: #717171;
+  font-size: 12px;
+  text-align: center;
+}

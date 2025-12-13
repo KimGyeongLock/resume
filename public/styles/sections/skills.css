@@ -1,0 +1,27 @@
+.skills { margin-top: 40px; }
+
+.skills h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.skill-row {
+  display: flex;
+  gap: 14px;
+  margin: 12px 0;
+}
+
+.skill-key {
+  width: 90px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-val {
+  flex: 1;
+  color: #717171;
+  font-size: 14px;
+  line-height: 1.6;
+}

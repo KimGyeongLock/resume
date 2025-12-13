@@ -1,0 +1,14 @@
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.6;
+}
+
+.contact .icon {
+  width: 21px;
+  height: 21px;
+  opacity: 0.85;
+  flex-shrink: 0;
+  transform: translateY(1px);
+}

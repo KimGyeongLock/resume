@@ -1,0 +1,19 @@
+header {
+  margin-top: 64px;
+}
+
+header h1 {
+  margin-bottom: 6px;
+}
+
+header h5 {
+  margin-top: 0;
+  line-height: 1.4;
+  color: #717171;
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

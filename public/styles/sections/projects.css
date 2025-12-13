@@ -1,0 +1,40 @@
+.projects { margin-top: 50px; }
+
+.projects h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.projects .project-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.projects .project-date { font-size: 14px; }
+
+.projects h3 {
+  font-size: 18px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.projects p {
+  font-size: 13px;
+  color: #717171;
+  margin: 5px;
+}
+
+.projects p a { color: #3498db; text-decoration: none; }
+.projects p a:hover { text-decoration: underline; }
+
+.project-details {
+  padding-left: 15px;
+  margin: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.project-details li { margin: 10px 0 10px; }

@@ -1,0 +1,37 @@
+body {
+  padding: 0px 28% 28%;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile { flex: 0.5; }
+
+.profile-img {
+  width: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  margin-top: 20px;
+  flex: 1.1;
+}
+
+.info .intro {
+  margin: 10px 0 40px;
+  font-size: 18px;
+}
+
+.info p {
+  margin: 7px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info span { color: #e67e22; font-weight: bold; }
+.info a { color: #3498db; text-decoration: none; }
+.info a:hover { text-decoration: underline; }
