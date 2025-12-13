@@ -4,7 +4,7 @@ const path = require("path");
 
 const SRC = path.join(__dirname, "src");
 const SECTIONS = path.join(SRC, "sections");
-const OUT_DIR = path.join(__dirname, "public");
+const OUT_DIR = path.join(__dirname, "docs");
 const OUT_FILE = path.join(OUT_DIR, "index.html");
 
 function read(filePath) {
