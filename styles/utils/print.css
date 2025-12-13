@@ -1,0 +1,57 @@
+@media print {
+  body {
+    padding: 0 !important;
+    /* ✅ 화면 패딩 완전 제거 */
+  }
+
+  .print-wrapper {
+    padding: 0 16mm;
+    /* ✅ 좌우 여백 (추천: 14~18mm) */
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* 섹션 쪼개짐 제어 (이전 답변 기준 유지) */
+  section,
+  article,
+  main {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .nts,
+  .edu-item,
+  .project-item,
+  .extra-block,
+  .experience-list li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ✅ 섹션 제목과 내용이 너무 벌어지면 이걸로 완화 */
+  .skills,
+  .experience,
+  .projects,
+  .education,
+  .extras,
+  .summary {
+    margin-top: 22px !important;
+    /* 필요하면 18~26 사이로 조절 */
+  }
+
+
+  @page {
+    size: A4;
+    margin: 14mm;
+    /* ✅ 위/아래 기본 여백 */
+  }
+}
