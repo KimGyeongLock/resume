@@ -1,0 +1,18 @@
+/* 모든 리스트 공통 */
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+/* 공통 커스텀 불릿 */
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  font-size: 15px;
+  color: #000;
+}

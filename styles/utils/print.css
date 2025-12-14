@@ -1,43 +1,62 @@
 @media print {
+  /* ✅ 인쇄 컬러 최대한 화면처럼 */
+  html, body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  header {
+    margin-top: -2mm;   /* 6~10mm 사이에서 취향 조절 */
+    padding-top: 0 !important;
+  }
+
   body {
     padding: 0 !important;
-    /* ✅ 화면 패딩 완전 제거 */
   }
 
   .print-wrapper {
-    padding: 0 16mm;
-    /* ✅ 좌우 여백 (추천: 14~18mm) */
+    padding: 0 16mm; /* 좌우 여백 */
   }
 
-  a {
-    color: inherit !important;
+  /* ✅ 기본 링크: 화면처럼 파란색 + 밑줄 없음 */
+  a, a:visited {
+    color: #3498db !important;
     text-decoration: none !important;
   }
 
-  /* 섹션 쪼개짐 제어 (이전 답변 기준 유지) */
+  /* ✅ 브라우저가 인쇄 시 URL 뒤에 붙이는 것 방지 */
+  a[href]::after {
+    content: "" !important;
+  }
+
+  /* ✅ footer(포트폴리오 링크)만: 색 유지 + 밑줄 */
+  footer.print-note a,
+  footer.print-note a:visited {
+    color: inherit !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+  }
+
+  /* ✅ 섹션/아티클이 통째로 넘어가지 않게: allow split */
   section,
   article,
-  main {
-    break-inside: auto;
-    page-break-inside: auto;
-  }
-
-  h2,
-  h3 {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
+  main,
   .nts,
   .edu-item,
   .project-item,
   .extra-block,
   .experience-list li {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
-  /* ✅ 섹션 제목과 내용이 너무 벌어지면 이걸로 완화 */
+  /* ✅ 제목이 페이지 맨 아래에 혼자 남는 것만 최소화 */
+  h2, h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ✅ 섹션 간 간격은 유지 */
   .skills,
   .experience,
   .projects,
@@ -45,13 +64,11 @@
   .extras,
   .summary {
     margin-top: 22px !important;
-    /* 필요하면 18~26 사이로 조절 */
   }
 
-
+  /* ✅ 페이지가 나뉠 때마다 위/아래 공간 확보 */
   @page {
     size: A4;
-    margin: 14mm;
-    /* ✅ 위/아래 기본 여백 */
+    margin: 18mm 14mm; /* 위/아래 18mm, 좌/우 14mm */
   }
 }

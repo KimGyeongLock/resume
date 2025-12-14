@@ -10,6 +10,7 @@
 @import url("./components/contact.css");
 @import url("./components/badges.css");
 @import url("./components/keywords.css");
+@import url("./components/list.css");
 
 /* sections */
 @import url("./sections/summary.css");
