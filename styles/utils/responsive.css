@@ -1,32 +1,110 @@
+/* =========================
+   Tablet (<= 1200px)
+========================= */
 @media (max-width: 1200px) {
-  body { padding: 0px 10% 10%; }
+  body { padding: 0 6% 6%; }
+  .print-wrapper { padding: 0; } /* 화면에서는 wrapper 패딩이 있으면 답답해짐 */
 }
 
+/* =========================
+   Mobile (<= 720px)
+========================= */
 @media (max-width: 720px) {
-  body { padding: 0px 5% 5%; }
-  main { flex-direction: column; align-items: center; }
-  .profile, .info { width: 100%; padding: 0; }
-  .info { padding-top: 20px; padding-left: 0; }
-  .profile img { width: 50%; }
+  body { padding: 0 4% 6%; }
 
-  .edu-item, .nts, .projects .project-item {
+  /* 헤더: 줄바꿈/간격 안정화 */
+  header h1 { font-size: 28px; line-height: 1.15; }
+  header h5 { font-size: 14px; line-height: 1.35; margin-top: 6px; }
+
+  /* main: 프로필/정보를 카드처럼 세로 배치 */
+  main {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 14px;
   }
 
-  .edu-item .date, .nts .date, .projects .project-date { align-self: flex-start; }
+  .profile, .info {
+    width: 100%;
+    padding: 0;
+  }
 
+  /* ✅ 사진 너무 큰 문제 해결 */
+  .profile {
+    display: flex;
+    justify-content: center;
+  }
+  .profile img {
+    width: 140px;        /* 고정 크기로 안정 */
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* 정보 영역 글 간격 */
+  .info { padding-top: 0; }
+  .info p { margin: 6px 0; }
+  .info .intro { font-size: 14px; line-height: 1.55; }
+
+  /* 링크 길면 줄바꿈 되게(특히 News URL) */
+  a { word-break: break-word; overflow-wrap: anywhere; }
+
+  /* 프로젝트/경험/교육 헤더: 날짜 줄 분리 */
+  .edu-item,
+  .nts,
+  .projects .project-item,
+  .global-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .edu-item .date,
+  .nts .project-date,
+  .projects .project-date,
+  .global-date {
+    align-self: flex-start;
+    white-space: normal;
+  }
+
+  /* 스킬: 세로로 */
   .skill-row { flex-direction: column; gap: 6px; }
   .skill-key { width: auto; }
 
-  .nts .date { white-space: normal; }
+  /* 프로젝트 설명 글자/행간 */
+  .projects p { font-size: 13px; line-height: 1.55; }
+  .project-details li { font-size: 13px; line-height: 1.6; }
+
+  /* 수상 News 줄: 들여쓰기 줄이고 촘촘하게 */
+  .extra-list li.extra-sub {
+    padding-left: 18px;
+    margin-top: 2px;
+    margin-bottom: 10px; /* News 있는 항목만 아래 여백 */
+  }
+
+  /* 글로벌 리스트도 모바일용 간격 */
+  .global-list li { margin: 6px 0; }
 }
 
+/* =========================
+   Small Mobile (<= 480px)
+========================= */
 @media (max-width: 480px) {
-  body { padding: 0px 5% 5%; }
-  .profile img { width: 50%; }
-  .info .intro, .info p, .education h2, .edu-item h3, .experience h2, .nts h3, .projects h2, .projects h3 {
-    font-size: smaller;
+  body { padding: 0 4% 8%; }
+
+  header h1 { font-size: 24px; }
+  header h5 { font-size: 13px; }
+
+  /* 더 작은 화면에선 사진 살짝 축소 */
+  .profile img {
+    width: 120px;
+    height: 120px;
   }
-  .projects p, .project-details li { font-size: x-small; }
+
+  /* 전반 타이포 살짝 다운 */
+  .summary-text { font-size: 13px; line-height: 1.65; }
+  .projects p, .project-details li { font-size: 12.5px; }
+  .extra-list li { font-size: 13px; line-height: 1.65; }
+
+  /* Badge가 너무 튀면 크기 축소(있다면) */
+  .duration-badge { transform: scale(0.92); transform-origin: left center; }
 }

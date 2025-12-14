@@ -31,7 +31,13 @@
     ================================================== -->
         <main>
             <div class="profile">
-                <img src="./assets/profile.jpg" alt="김경록 프로필" class="profile-img" />
+                <picture>
+                    <!-- 모바일용 (720px 이하) -->
+                    <source srcset="./assets/profile2.jpg" media="(max-width: 720px)" />
+
+                    <!-- 기본(데스크톱) -->
+                    <img src="./assets/profile.jpg" alt="김경록 프로필" class="profile-img" />
+                </picture>
             </div>
 
             <div class="info">
@@ -283,7 +289,7 @@
                     </li>
 
                     <li>
-                        <span class="em-metric">조회 대상 200+ → 4건</span>,
+                        <span class="em-metric">조회 대상 O(N) → O(20)건</span>,
                         <span class="em-metric">DB Read 약 98% 절감</span>
                     </li>
                 </ul>
@@ -469,6 +475,53 @@
         </section>
 
         <!-- ==================================================
+  GLOBAL EXPERIENCE
+================================================== -->
+        <section class="global">
+            <h2>GLOBAL EXPERIENCE</h2>
+
+            <div class="global-item">
+                <div class="global-title">
+                    <h3>글로벌 혁신 창업네트워크 프로그램</h3>
+                    <p class="global-loc">San Francisco, USA</p>
+                </div>
+
+                <p class="global-date">
+                    2025.01.09 ~ 2025.01.27
+                </p>
+            </div>
+
+            <ul class="global-list">
+                <li>
+                    <div class="contents">
+                        샌프란시스코에서 <span class="em">17박 18일</span>간 진행된
+                        실리콘밸리 창업 프로그램 참여 및
+                        <span class="em">현지 VC·CEO·개발자</span>와 교류
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contents">
+                        <span class="em">Apple·Google·Adobe·NVIDIA·SoftBank</span> 등
+                        글로벌 기업 방문을 통해
+                        <span class="em">조직 문화와 기술 트렌드</span> 체험
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contents">
+                        <span class="em">UKF Startup Summit,
+                            Kstartup Silicon Valley Demo Day,
+                            Founders Night at Stanford</span> 등 행사 참여로
+                        글로벌 네트워크 확장
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- ==================================================
          EXTRAS
     ================================================== -->
         <section class="extras">
@@ -593,7 +646,7 @@
 
         <footer class="print-note">
             자세한 프로젝트 설명과 문제 해결 과정은
-            <a href="https://kimgyeonglock.github.io" target="_blank" rel="noreferrer">
+            <a href="./assets/portfolio.pdf" target="_blank" rel="noopener noreferrer">
                 포트폴리오
             </a>
             에서 확인하실 수 있습니다.

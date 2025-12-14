@@ -19,6 +19,7 @@
 @import url("./sections/projects.css");
 @import url("./sections/education.css");
 @import url("./sections/extras.css");
+@import url("./sections/global.css");
 
 /* utils */
 @import url("./utils/responsive.css");

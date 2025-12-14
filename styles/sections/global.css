@@ -1,0 +1,60 @@
+.global {
+  margin-top: 50px;
+}
+
+.global h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.global-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+.global-title h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.global-loc {
+  font-size: 13px;
+  color: #717171;
+  margin: 4px 0 0;
+}
+
+.global-date {
+  font-size: 14px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.global-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+}
+
+.global-list li {
+  position: relative;
+  padding-left: 14px;
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.global-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  top: 0.2em;
+  color: #000;
+}
+
+.global-list .contents {
+  padding-left: 5px;
+}
