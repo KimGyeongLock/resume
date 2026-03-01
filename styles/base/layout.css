@@ -16,6 +16,17 @@ main {
   border-radius: 10px;
 }
 
+/* Prevent profile image from being draggable/selectable */
+.profile-img,
+.profile img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .info {
   margin-top: 20px;
   flex: 1.1;

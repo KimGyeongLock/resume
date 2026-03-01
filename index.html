@@ -192,6 +192,48 @@
 
             <article class="project">
                 <div class="project-item">
+                    <h3>Redis 실시간 집계 전환으로 랭킹 API p95 98% 개선</h3>
+                    <p class="project-date">2026.02 ~ 2026.02</p>
+                </div>
+
+                <p>대학 이수 관리 및 졸업 설계 서비스, GRADU</p>
+
+                <ul class="project-details">
+                    <li>
+                        기존 랭킹 API는 조회 시마다
+                        <span class="em">DB 집계(COUNT + GROUP BY + ORDER BY)</span>를 반복해
+                        트래픽 증가 시 <span class="em">지연과 DB 부하가 급증</span>하는 구조였음
+                    </li>
+                    <li>
+                        <span class="em">Redis ZSET/HASH</span> 기반으로
+                        <span class="em">category·major-term·display</span> 키를 분리 설계하고,
+                        <span class="em">Write-time Aggregation</span> 방식으로 조회 시 계산을 제거
+                    </li>
+                    <li>
+                        다중 키 갱신 중 부분 반영을 막기 위해
+                        <span class="em">Lua 원자 업데이트</span>를 적용해
+                        category ZSET·major ZSET·display HASH를
+                        <span class="em">단일 실행 단위</span>로 처리
+                    </li>
+                    <li>
+                        운영 중 이벤트 누락/드리프트 복구를 위해
+                        <span class="em">@Scheduled 배치 재빌드</span>를 도입해
+                        <span class="em">DB 기준으로 Redis 랭킹을 주기적 재구성</span>
+                    </li>
+                    <li>
+                        동일 부하 시나리오(k6, 20→30→50 VU) A/B 테스트 결과
+                        <br>&nbsp;&nbsp;• <span class="em-metric">p95: 2.98s → 48.24ms (98.38%↓)</span>
+                        <br>&nbsp;&nbsp;• <span class="em-metric">RPS: 13.97 → 105.36 (7.54x↑)</span>
+                        <br>&nbsp;&nbsp;• <span class="em-metric">DB 집계 쿼리: 2575건 → 0건 (100%↓)</span>
+                    </li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="project">
+                <div class="project-item">
                     <h3>인가 구조 재설계로 IDOR 취약점 제거 및 개인정보 유출 예방</h3>
                     <p class="project-date">2025.07 ~ 운영중</p>
                 </div>
@@ -417,7 +459,7 @@
                     <p class="project-date">2024.04 ~ 2024.06</p>
                 </div>
 
-                <p>검색엔지 서비스 KUBiC의 대규모 데이터 덤프를 대상으로 한 DB 구조 개선 프로젝트</p>
+                <p>검색엔진 서비스 KUBiC의 대규모 데이터 덤프를 대상으로 한 DB 구조 개선 프로젝트</p>
 
                 <ul class="project-details">
                     <li>
