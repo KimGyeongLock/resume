@@ -14,9 +14,11 @@
 }
 
 .skill-key {
-  width: 90px;
+  width: 110px;
   font-weight: bold;
   color: #333;
+  line-height: 1.5;
+
 }
 
 .skill-val {
