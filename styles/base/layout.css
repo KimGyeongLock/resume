@@ -1,11 +1,14 @@
 body {
   padding: 0px 28% 28%;
   height: 100vh;
+  text-align: left;
 }
 
 main {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .profile { flex: 0.5; }
@@ -30,6 +33,7 @@ main {
 .info {
   margin-top: 20px;
   flex: 1.1;
+  min-width: 0;
 }
 
 .info .intro {
@@ -41,6 +45,7 @@ main {
   margin: 7px 0;
   font-size: 14px;
   line-height: 1.6;
+  text-align: left;
 }
 
 .info span { color: #e67e22; font-weight: bold; }

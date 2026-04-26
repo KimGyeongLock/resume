@@ -15,19 +15,30 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
   padding-bottom: 5px;
+}
+
+.projects .project-item > :first-child {
+  min-width: 0;
 }
 
 /* ✅ 전역 공통 클래스: PROJECT + EXPERIENCE 모두 동일 */
 .project-date {
   font-size: 14px;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: left;
+  flex-shrink: 0;
 }
 
 .projects h3 {
   font-size: 18px;
   padding-top: 5px;
   margin: 0;
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .projects p {

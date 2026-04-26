@@ -13,20 +13,28 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 12px;
   padding-top: 10px;
+}
+
+.nts > :first-child {
+  min-width: 0;
 }
 
 .nts h3 {
   font-size: 18px;
   padding-top: 0;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .nts .nts-status {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
@@ -46,8 +54,12 @@
   margin: 0;
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 14px;
   line-height: 1.2;
+  white-space: normal;
+  text-align: left;
 }
 
 /* 활동 내역 */
@@ -63,6 +75,7 @@
   margin: 10px 0;
   font-size: 14px;
   position: relative;
+  text-align: left;
 }
 
 .experience-list li::before {
@@ -76,6 +89,9 @@
   justify-content: flex-start;
   align-items: baseline;
   gap: 10px;
+  min-width: 0;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 /* PROJECT + EXPERIENCE 공통 링크 텍스트 */

@@ -11,12 +11,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .edu-item .edu-status {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
 .edu-item .status {
@@ -33,13 +36,19 @@
 }
 
 .edu-item p { margin: 5px 0; font-size: 14px; }
-.date { padding-top: 3px; }
+.date {
+  padding-top: 3px;
+  text-align: left;
+  white-space: normal;
+  flex-shrink: 0;
+}
 .second-item { margin-top: 15px; }
 .major { padding-left: 5px; padding-right: 15px; }
 .edu-detail {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .gpa span { color: #e67e22; font-weight: bold; }
 .honor-title {

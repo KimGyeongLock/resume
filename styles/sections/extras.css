@@ -29,11 +29,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 12px;
   position: relative;
   padding-left: 14px;
   margin: 6px 0;
   font-size: 14px;
   line-height: 1.7;
+  text-align: left;
 }
 
 .extra-list li:has(+ .extra-sub) {
@@ -53,13 +55,18 @@
 .extra-list .title {
   padding-left: 5px;
   padding-right: 12px;
+  min-width: 0;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 /* 오른쪽 날짜 */
 .extra-list .date {
   color: #717171;
   font-size: 13px;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: left;
+  flex-shrink: 0;
 }
 
 /* News 링크 줄: 사진(GitHub: 링크) 스타일처럼 */
