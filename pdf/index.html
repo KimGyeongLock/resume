@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>김경록 | 서버 개발자 | PDF</title>
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="preconnect" href="https://statics.goorm.io" crossorigin="anonymous" />
+    <link rel="preload" as="style" crossorigin
+        href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css" />
+    <link rel="stylesheet" href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css" />
+</head>
+
+<body class="goorm-sans-font">
+    <aside class="section-bookmarks is-hidden" aria-label="Section navigation">
+        <a href="#introduce">INTRODUCE</a>
+        <a href="#skill">SKILL</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#project">PROJECT</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#global">GLOBAL</a>
+        <a href="#etc">ETC</a>
+    </aside>
+
+    <button class="print-fab" type="button" aria-label="Print resume">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M17 7V3H7v4H5a3 3 0 0 0-3 3v5a2 2 0 0 0 2 2h2v4h12v-4h2a2 2 0 0 0 2-2v-5a3 3 0 0 0-3-3h-2zM9 5h6v2H9V5zm7 14H8v-6h8v6zm2-6a1 1 0 1 1 0-2a1 1 0 0 1 0 2z" />
+        </svg>
+    </button>
+
+    <div class="print-wrapper">
+
+        <!-- ==================================================
+         HEADER
+    ================================================== -->
+        <header>
+            <div class="header-link">
+                <h1>김경록 (Roki)</h1>
+                <h5>서버/백엔드 개발자 · 데이터 신뢰성과 시스템 안정성을 최우선으로 가치를 창출합니다</h5>
+            </div>
+        </header>
+
+        <!-- ==================================================
+         PROFILE + BASIC INFO
+    ================================================== -->
+        <main>
+            <div class="profile">
+                <picture>
+                    <!-- 모바일용 (720px 이하) -->
+                    <source srcset="../assets/profile2.jpg" media="(max-width: 720px)" />
+
+                    <!-- 기본(데스크톱) -->
+                    <img src="../assets/profile.jpg" alt="김경록 프로필" class="profile-img" />
+                </picture>
+            </div>
+
+            <div class="info">
+                <p class="intro">
+                    API 지연 시간을 N% 단축하고, 인증·인가 기반의 보안 설계로 데이터 신뢰성을 높여온 백엔드 개발자, <span>김경록</span>입니다.
+                </p>
+
+                <p>📞 Phone: 010-8079-5427</p>
+                <p>📧 Email: kkl5468@gmail.com</p>
+
+                <p class="contact">
+                    <img src="../assets/github.svg" alt="GitHub" class="icon" />
+                    GitHub:
+                    <a href="https://github.com/KimGyeongLock" target="_blank" rel="noreferrer">
+                        github.com/KimGyeongLock
+                    </a>
+                </p>
+
+                <p>
+                    📝 Blog:
+                    <a href="https://kimgyeonglock.github.io/" target="_blank" rel="noreferrer">
+                        kimgyeonglock.github.io
+                    </a>
+                </p>
+            </div>
+        </main>
+
+        <!-- ==================================================
+         INTRODUCE / SUMMARY
+    ================================================== -->
+        <section class="summary" id="introduce">
+            <h2>INTRODUCE</h2>
+
+            <p class="summary-text">
+                웹/앱 서비스의 <span class="em-metric">백엔드 아키텍처 설계와 실서비스 운영 경험</span>을 바탕으로,
+                기획부터 배포, 운영 전 과정을 책임지며 <span class="em">안정적인 백엔드 시스템</span>을 구축해왔습니다.<br />
+
+                누적 <span class="em-metric">280명의 사용자</span>를 확보한 서비스를 운영하며 <span class="em">비즈니스 요구사항에 따른 유연한 기능
+                    확장</span>과
+                <span class="em">실시간 모니터링 기반의 장애 대응</span>을 경험했습니다. 6,000만 원 이상의 투자 유치 과정에서 기술적 의사결정권을 행사하며,
+                단순 개발을 넘어 서비스의 지속 가능성을 고민해 왔습니다.<br />
+
+                카카오테크 부트캠프를 통해 <span class="em">Spring 기반 백엔드 역량</span>을 체계화했으며,
+                <span class="em-metric">동시성 제어 및 성능 최적화</span>를 실제 프로젝트에 적용하여 대규모 트래픽 처리를 위한 기반을 다졌습니다.
+            </p>
+        </section>
+
+        <!-- ==================================================
+         SKILLS
+    ================================================== -->
+        <section class="skills" id="skill">
+            <h2>SKILL</h2>
+
+            <div class="skill-row">
+                <div class="skill-key">Backend</div>
+                <div class="skill-val">Spring Boot, Java, JPA</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-key">Frontend</div>
+                <div class="skill-val">Flutter, React, TypeScript</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-key">DB & Infra</div>
+                <div class="skill-val">MySQL, Redis, Firebase, Docker, AWS</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-key">Performance</div>
+                <div class="skill-val">JMeter, k6</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-key">Tools</div>
+                <div class="skill-val">Git / GitHub, Jira</div>
+            </div>
+        </section>
+
+        <!-- ==================================================
+         EXPERIENCE
+    ================================================== -->
+        <section class="experience" id="experience">
+            <h2>EXPERIENCE</h2>
+
+            <!-- ✅ project-item / project-date 패턴으로 통일 -->
+            <div class="nts project-item">
+                <div>
+                    <div class="nts-status">
+                        <h3>Nein to Sick</h3>
+                        <p class="status">| 백엔드 개발 리드</p>
+                    </div>
+                    <p class="desc">Startup (초기 멤버)</p>
+                </div>
+
+                <!-- ✅ date -> project-date 로 변경 -->
+                <p class="project-date">
+                    <span class="duration-badge">7개월</span>
+                    2024.05.22 ~ 2024.12.31
+                </p>
+            </div>
+
+            <ul class="experience-list">
+                <li>
+                    <div class="contents"><span class="em-metric">누적 280명 사용자 기반 실서비스 운영</span>및 비즈니스 요구사항에 따른 신규 피처 대응
+                    </div>
+                </li>
+                <li>
+                    <div class="contents">LLM 기반 일상 감정 관리 플랫폼 ‘온기’ 백엔드 아키텍처 설계 및 MVP 개발 주도</div>
+                </li>
+                <li>
+                    <div class="contents">일기 작성 및 공유 기능 개발 (FE & BE)</div>
+                </li>
+                <li>
+                    <div class="contents">감정별 대표 문서 체계 도입해 N% 데이터 탐색 효율 개선</div>
+                </li>
+                <li>
+                    <div class="contents">B2B 확장 후 고객사 전용 통계 대시보드, 민원 게시판 개발</div>
+                </li>
+                <li>
+                    <div class="contents">Sentry 기반 에러 수집 및 모니터링 시스템 구축</div>
+                </li>
+
+                <li class="skill-keywords">
+                    <div class="contents">Skill Keywords</div>
+                    <div class="keywords">
+                        <span class="kw">Flutter</span>
+                        <span class="kw">OpenAI API</span>
+                        <span class="kw">Firebase</span>
+                        <span class="kw">DeepL API</span>
+                        <span class="kw">Sentry</span>
+                        <span class="kw">Git/GitHub</span>
+                    </div>
+                </li>
+            </ul>
+            <p class="project-link">
+                Link:
+                <a href="https://sehan2709-cmis.github.io/nts_web/" target="_blank" rel="noreferrer">
+                    Nein to Sick Company - Why Not Change the World
+                </a>
+            </p>
+        </section>
+
+        <!-- ==================================================
+         PROJECTS
+    ================================================== -->
+        <section class="projects" id="project">
+            <h2>PROJECT</h2>
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>Redis 실시간 집계 전환으로 랭킹 API p95 98% 개선</h3>
+                    <p class="project-date">2026.02 ~ 2026.02</p>
+                </div>
+
+                <p>대학 이수 관리 및 졸업 설계 서비스, GRADU</p>
+
+                <ul class="project-details">
+                    <li>
+                        기존 랭킹 API는 조회 시마다
+                        <span class="em">DB 집계(COUNT + GROUP BY + ORDER BY)</span>를 반복해
+                        트래픽 증가 시 <span class="em">지연과 DB 부하가 급증</span>하는 구조였음
+                    </li>
+                    <li>
+                        <span class="em">Redis ZSET/HASH</span> 기반으로
+                        <span class="em">category·major-term·display</span> 키를 분리 설계하고,
+                        <span class="em">Write-time Aggregation</span> 방식으로 조회 시 계산을 제거
+                    </li>
+                    <li>
+                        <span class="em">Lua 스크립트</span>를 통해 다중 키 갱신 시의 원자성을 보장함으로써, 네트워크 오버헤드를 줄이고 데이터 무결성 유지
+
+                    </li>
+                    <li>
+                        운영 중 이벤트 누락/드리프트 복구를 위해
+                        <span class="em">@Scheduled 배치 재빌드</span>를 도입해
+                        <span class="em">DB 기준으로 Redis 랭킹을 주기적 재구성</span>
+                    </li>
+                    <li>
+                        동일 부하 시나리오(k6, 20→30→50 VU) A/B 테스트 결과
+                        <br>&nbsp;&nbsp;• <span class="em-metric">p95: 2.98s → 48.24ms (98.38%↓)</span>
+                        <br>&nbsp;&nbsp;• <span class="em-metric">RPS: 13.97 → 105.36 (7.54x↑)</span>
+                        <br>&nbsp;&nbsp;• <span class="em-metric">DB 집계 쿼리: 2575건 → 0건 (100%↓)</span>
+                    </li>
+                </ul>
+
+            </article>
+
+
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>인가 구조 재설계로 IDOR 취약점 제거 및 개인정보 유출 예방</h3>
+                    <p class="project-date">2025.07 ~ 운영중</p>
+                </div>
+
+                <p>대학 이수 관리 및 졸업 설계 서비스, GRADU</p>
+
+                <ul class="project-details">
+                    <li>
+                        학생별 리소스를 다루는 API에서
+                        <span class="em">인가 우회 가능성</span>을 점검하기 위해
+                        OpenAPI 스펙 기준
+                        <span class="em">10개 엔드포인트</span>를 식별
+                    </li>
+
+                    <li>
+                        “본인 / 타인 / 미인증 사용자” 조합으로
+                        <span class="em">총 30개의 인가 테스트 시나리오</span>를 설계하고
+                        JUnit 통합 테스트로 자동화
+                    </li>
+
+                    <li>
+                        일부 API에서
+                        URL의 식별자만 변경해
+                        타인 데이터 접근이 가능한
+                        <span class="em">IDOR 취약점</span>을 발견
+                    </li>
+
+                    <li>
+                        AOP 기반
+                        <span class="em">인가 어노테이션</span>을 도입해
+                        컨트롤러 진입 전
+                        JWT와 PathVariable을 비교하도록 구조를 개선
+                    </li>
+
+                    <li>
+                        DB 스키마를 재점검하며
+                        학번·실명 등
+                        <span class="em">직접 식별자 컬럼을 제거</span>하고,
+                        필수 이메일만
+                        <span class="em">AES 암호화</span>하여 저장하도록 리팩토링
+                    </li>
+
+                    <li>
+                        <span class="em-metric">인가 테스트 30/30 통과</span>,
+                        <span class="em-metric">민감 컬럼 약 70% 감소</span>,
+                        <span class="em-metric">IDOR 취약점 제거</span>
+                    </li>
+                </ul>
+                <p>
+                    Link:
+                    <a href="https://gradu0420.notion.site/GRADU-2bdd4780dde180709bd6c3e868fa1360" target="_blank"
+                        rel="noreferrer">
+                        https://gradu0420.notion.site/GRADU-2bdd4780dde180709bd6c3e868fa1360
+                    </a>
+                </p>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/KimGyeongLock/GRADU" target="_blank" rel="noreferrer">
+                        https://github.com/KimGyeongLock/GRADU
+                    </a>
+                </p>
+            </article>
+
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>감정별 대표 문서 체계 도입으로 일기 추천 성능 개선</h3>
+                    <p class="project-date">2024.05 ~ 운영중</p>
+                </div>
+                <p>LLM 기반 일상 감정 관리 플랫폼, 온기</p>
+                <ul class="project-details">
+                    <li>
+                        기존 <span class="em">키워드 매칭 방식</span>이
+                        <span class="em">전체 일기 탐색</span>을 유발해
+                        <span class="em">Read 병목</span>이 발생함을 정의
+                    </li>
+
+                    <li>
+                        LLM으로 추출한 감정 키워드를
+                        <span class="em">5개 감정 카테고리</span>로
+                        <span class="em">정규화</span>
+                    </li>
+
+                    <li>
+                        각 카테고리에
+                        <span class="em">대표 일기 4개</span>를 유지하는
+                        <span class="em">대표 문서 체계</span>를 설계
+                    </li>
+
+                    <li>
+                        신규 일기는
+                        <span class="em">카테고리 매핑 후</span>
+                        해당 <span class="em">4개 문서만 비교</span>하도록
+                        추천 로직을 변경
+                    </li>
+
+                    <li>
+                        전체 데이터 탐색 구조를 <span class="em-metric">상수 시간 기반 탐색</span>으로 개선하여, 데이터 증가와 무관하게 일정한 응답 속도를 유지하도록 설계했습니다.
+                    </li>
+                </ul>
+
+                <p>
+                    Store Link:
+                    <a href="https://tosto.re/bandiApp" target="_blank" rel="noreferrer">
+                        https://tosto.re/bandiApp
+                    </a>
+                </p>
+                <p>
+                    B2B 웹:
+                    <a href="https://bandi-official.web.app/" target="_blank" rel="noreferrer">
+                        https://bandi-official.web.app
+                    </a>
+                </p>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Nein-to-Sick/bandi_official" target="_blank" rel="noreferrer">
+                        https://github.com/Nein-to-Sick/bandi_official
+                    </a>
+                </p>
+            </article>
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>동시성 제어 및 Redis 오프로딩으로 중고거래 트래픽 안정화</h3>
+                    <p class="project-date">2024.10 ~ 2024.12</p>
+                </div>
+
+                <p>사물함 기반 비대면 중고거래 커머스 서비스, 거래함</p>
+
+                <ul class="project-details">
+                    <li>
+                        멀티 스레드 환경에서
+                        <span class="em">구매 로직 동시 실행</span>으로
+                        <span class="em">데이터 정합성 이슈</span>가 발생함을 정의
+                    </li>
+
+                    <li>
+                        <span class="em">DB 비관적 락</span>을 적용하여 데이터 정합성을 우선 확보했으며, 향후 대규모 트래픽 확장을 고려한 <span class="em">분산 락</span> 전환 구조 검토
+                    </li>
+
+                    <li>
+                        좋아요·조회수 등
+                        <span class="em">고빈도 Write</span>로 인한
+                        DB 부하를 줄이기 위해
+                        <span class="em">Redis 인메모리 캐시</span>를 도입
+                    </li>
+
+                    <li>
+                        Redis
+                        <span class="em">원자 연산</span>과
+                        <span class="em">TTL 기반 동기화</span>로
+                        캐시–DB 간 정합성을 유지
+                    </li>
+
+                    <li>
+                        <span class="em-metric">멀티 스레드 환경에서도 데이터 정합성 확보</span>,
+                        <span class="em-metric">DB Write 부하 감소 및 처리 성능 개선</span>
+                    </li>
+                </ul>
+
+                <p class="project-link">
+                    GitHub:
+                    <a href="https://github.com/TradeHam/TradeHam" target="_blank" rel="noreferrer">
+                        https://github.com/TradeHam/TradeHam
+                    </a>
+                </p>
+            </article>
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>실시간 음성 스트리밍 인코딩 오류 해결과 STT 지연 시간 단축</h3>
+                    <p class="project-date">2024.09 ~ 2024.12</p>
+                </div>
+
+                <p>실시간 음성 텍스트 통화 서비스, 앵무말</p>
+
+                <ul class="project-details">
+                    <li>
+                        스트리밍 오디오를
+                        <span class="em">STT로 변환</span>하는 과정에서
+                        <span class="em">텍스트 응답이 null</span>로 반환되는 문제를 정의
+                    </li>
+
+                    <li>
+                        WebRTC 오디오 포맷과
+                        <span class="em">AWS Transcribe 입력 규격 불일치</span>가
+                        문제의 원인임을 파악
+                    </li>
+
+                    <li>
+                        오디오를
+                        <span class="em">16bit PCM 포맷</span>으로 변환하고
+                        <span class="em">48kHz 샘플레이트</span>로 재구성
+                    </li>
+
+                    <li>
+                        스트리밍 오디오
+                        <span class="em">chunk 처리 방식</span>을 개선해
+                        실시간 STT 파이프라인을 안정화
+                    </li>
+
+                    <li>
+                        <span class="em-metric">지연 시간 3~5분 → 20~30초 단축</span>,
+                        <span class="em-metric">정확한 문장 단위 STT 결과 확보</span>
+                    </li>
+                </ul>
+
+                <p class="project-link">
+                    GitHub:
+                    <a href="https://github.com/Parrotalk" target="_blank" rel="noreferrer">
+                        https://github.com/Parrotalk
+                    </a>
+                </p>
+            </article>
+
+            <article class="project">
+                <div class="project-item">
+                    <h3>200만 건 비정형 데이터 덤프의 구조화 및 DB 조회 성능 최적화</h3>
+                    <p class="project-date">2024.04 ~ 2024.06</p>
+                </div>
+
+                <p>검색엔진 서비스 KUBiC의 대규모 데이터 덤프를 대상으로 한 DB 구조 개선 프로젝트</p>
+
+                <ul class="project-details">
+                    <li>
+                        검색 엔진용 <span class="em">200만 건 대용량 데이터 덤프</span>의 비효율적인 저장 구조로 인한 용량 비대화 및 성능 저하 문제 해결
+                    </li>
+                    <li>
+                        대용량 처리 안정성을 위해
+                        <span class="em">MySQL InnoDB 엔진</span>을 채택하고
+                        <span class="em">EXPLAIN·PROFILING</span>으로 쿼리 병목을 분석
+                    </li>
+                    <li>
+                        <span class="em">스키마 정규화</span>를 통해 데이터 중복을 제거하고, <span class="em">클러스터형 인덱스</span> 재설계를 통해 무작위
+                        I/O 최소화
+                    </li>
+                    <li>
+                        <span class="em-metric">DB 용량 3.3GB → 32MB 최적화, 평균 쿼리 응답 시간 2.7초 → 1초대로 개선</span>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!-- ==================================================
+         EDUCATION
+    ================================================== -->
+        <section class="education" id="education">
+            <h2>EDUCATION</h2>
+
+            <div class="edu-item second-item">
+                <div>
+                    <div class="edu-status">
+                        <h3>한동대학교</h3>
+                        <p class="status">| 졸업</p>
+                    </div>
+                    <div class="edu-detail">
+                        <p class="major">AI·컴퓨터공학심화전공</p>
+                        <p class="gpa">GPA <span>4.17</span>/4.5</p>
+                        <p class="title honor-title"><span class="em honor-text">(Magna Cum Laude)</span></p>
+                    </div>
+                </div>
+                <p class="date">2019.02 ~ 2026.02</p>
+            </div>
+        </section>
+
+        <!-- ==================================================
+  GLOBAL EXPERIENCE
+================================================== -->
+        <section class="global" id="global">
+            <h2>GLOBAL EXPERIENCE</h2>
+
+            <div class="global-item">
+                <div class="global-title">
+                    <h3>글로벌 혁신 창업네트워크 프로그램</h3>
+                    <p class="global-loc">San Francisco, USA</p>
+                </div>
+
+                <p class="global-date">
+                    2025.01.09 ~ 2025.01.27
+                </p>
+            </div>
+
+            <ul class="global-list">
+                <li>
+                    <div class="contents">
+                        실리콘밸리 창업 프로그램 참여 및 현지 VC·CEO·개발자와 교류
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contents">
+                        Apple·Google·Adobe·NVIDIA·SoftBank 등 글로벌 기업 방문을 통해 조직 문화와 기술 트렌드 체험
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contents">
+                        UKF Startup Summit, Kstartup Silicon Valley Demo Day, Founders Night at Stanford 등 컨퍼런스 참여로 글로벌 네트워크 확장
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- ==================================================
+         EXTRAS
+    ================================================== -->
+        <section class="extras" id="etc">
+            <h2>ETC</h2>
+
+            <!-- 교육 -->
+            <div class="extra-block">
+                <h3>교육</h3>
+                <ul class="extra-list">
+                    <li>
+                        <span class="title">삼성전자 DX부문 하계 S/W 알고리즘 역량 강화 특강</span>
+                        <span class="date">2025.07.14 ~ 2025.08.08</span>
+                    </li>
+                    <li>
+                        <span class="title">카카오테크 부트캠프 풀스택 과정</span>
+                        <span class="date">2024.07.01 ~ 2024.12.27</span>
+                    </li>
+                    <li>
+                        <span class="title">코딩클리닉 - 실전 백엔드 개발 캠프</span>
+                        <span class="date">2024.03.18 ~ 2024.06.07</span>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <!-- 자격 -->
+            <div class="extra-block">
+                <h3>자격</h3>
+                <ul class="extra-list">
+                    <li>
+                        <span class="title">TOEIC Speaking IH</span>
+                        <span class="date">2025.08.30</span>
+                    </li>
+                    <li>
+                        <span class="title">네트워크관리사 2급</span>
+                        <span class="date">2022.04.12</span>
+                    </li>
+                    <li>
+                        <span class="title">리눅스마스터 2급</span>
+                        <span class="date">2022.04.01</span>
+                    </li>
+                    <li>
+                        <span class="title">컴퓨터활용능력 1급</span>
+                        <span class="date">2021.05.07</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 수상 / 선정 -->
+            <div class="extra-block">
+                <h3>수상/선정</h3>
+
+                <ul class="extra-list">
+                    <li>
+                        <span class="title">제 13회 창업경진대회 RPM 대상</span>
+                        <span class="date">2024.12.24</span>
+                    </li>
+                    <li class="extra-sub">
+                        <span class="label">News:</span>
+                        <a href="https://www.veritas-a.com/news/articleView.html?idxno=531266" target="_blank"
+                            rel="noreferrer">
+                            https://www.veritas-a.com/news/articleView.html?idxno=531266
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="title">SW Festival 프로그래밍 경진대회 장려상</span>
+                        <span class="date">2024.11.17</span>
+                    </li>
+
+                    <li>
+                        <span class="title">캡스톤디자인 경진대회 우수상</span>
+                        <span class="date">2024.06.03</span>
+                    </li>
+
+                    <li>
+                        <span class="title">K-Startup 예비창업패키지 지원 선정 (5,800만원)</span>
+                        <span class="date">2024.04.29</span>
+                    </li>
+                    <li class="extra-sub">
+                        <span class="label">News:</span>
+                        <a href="http://www.mediagb.kr/news/view.php?idx=34988" target="_blank" rel="noreferrer">
+                            http://www.mediagb.kr/news/view.php?idx=34988
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="title">POSTECH Mini-I-Corps 우수상</span>
+                        <span class="date">2024.02.08</span>
+                    </li>
+
+                    <li>
+                        <span class="title">제 12회 창업경진대회 RPM 장려상</span>
+                        <span class="date">2023.11.30</span>
+                    </li>
+                    <li class="extra-sub">
+                        <span class="label">News:</span>
+                        <a href="https://www.christiandaily.co.kr/news/130618" target="_blank" rel="noreferrer">
+                            https://www.christiandaily.co.kr/news/130618
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="title">SW Festival 스마트어플리케이션 대상</span>
+                        <span class="date">2023.11.17</span>
+                    </li>
+
+                    <li>
+                        <span class="title">SW Festival 문제해결 아이디어 공모전 장려상</span>
+                        <span class="date">2023.11.17</span>
+                    </li>
+
+                    <li>
+                        <span class="title">SW 창업 경진대회 대상</span>
+                        <span class="date">2023.10.27</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <footer class="print-note">
+            자세한 프로젝트 설명과 문제 해결 과정은
+            <a href="../assets/portfolio.pdf" target="_blank" rel="noopener noreferrer">
+                포트폴리오
+            </a>
+            에서 확인하실 수 있습니다.
+        </footer>
+
+
+    </div>
+
+    <script>
+        const bookmarkNav = document.querySelector(".section-bookmarks");
+        const printButton = document.querySelector(".print-fab");
+        const bookmarkLinks = document.querySelectorAll(".section-bookmarks a");
+        const observedSections = [...bookmarkLinks]
+            .map((link) => document.querySelector(link.getAttribute("href")))
+            .filter(Boolean);
+        const introduceSection = document.querySelector("#introduce");
+
+        const setActiveBookmark = (sectionId) => {
+            bookmarkLinks.forEach((link) => {
+                const isActive = link.getAttribute("href") === `#${sectionId}`;
+                link.classList.toggle("active", isActive);
+                link.setAttribute("aria-current", isActive ? "true" : "false");
+            });
+        };
+
+        const updateActiveBookmark = () => {
+            if (!bookmarkNav || !introduceSection || observedSections.length === 0) {
+                return;
+            }
+
+            const introduceTop = introduceSection.getBoundingClientRect().top;
+            const shouldHideBookmarks = introduceTop > window.innerHeight * 0.2;
+            bookmarkNav.classList.toggle("is-hidden", shouldHideBookmarks);
+
+            if (shouldHideBookmarks) {
+                bookmarkLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    link.setAttribute("aria-current", "false");
+                });
+                return;
+            }
+
+            const activationLine = window.innerHeight * 0.28;
+            let currentSection = observedSections[0];
+
+            observedSections.forEach((section) => {
+                const { top } = section.getBoundingClientRect();
+
+                if (top <= activationLine) {
+                    currentSection = section;
+                }
+            });
+
+            if (currentSection) {
+                setActiveBookmark(currentSection.id);
+            }
+        };
+
+        window.addEventListener("scroll", updateActiveBookmark, { passive: true });
+        window.addEventListener("resize", updateActiveBookmark);
+
+        if (printButton) {
+            printButton.addEventListener("click", () => window.print());
+        }
+
+        if (observedSections.length > 0) {
+            updateActiveBookmark();
+        }
+    </script>
+</body>
+
+</html>
