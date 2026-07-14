@@ -1,7 +1,99 @@
 body {
-  padding: 0px 28% 28%;
-  height: 100vh;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 36px 48px;
+  min-height: 100vh;
   text-align: left;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-bookmarks {
+  position: fixed;
+  top: 50%;
+  right: clamp(12px, 2.5vw, 40px);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.section-bookmarks.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.section-bookmarks a {
+  position: relative;
+  color: #717171;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.section-bookmarks a.active,
+.section-bookmarks a:hover,
+.section-bookmarks a:focus-visible {
+  color: #e67e22;
+  transform: translateX(-3px);
+}
+
+.section-bookmarks a.active::after,
+.section-bookmarks a:hover::after,
+.section-bookmarks a:focus-visible::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 2px;
+  height: 24px;
+  background: #e67e22;
+  transform: translateY(-50%);
+  border-radius: 999px;
+}
+
+.print-fab {
+  position: fixed;
+  right: clamp(16px, 3vw, 36px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 12;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(52, 87, 138, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(47, 58, 69, 0.08);
+  color: #2f3a45;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.print-fab:hover,
+.print-fab:focus-visible {
+  border-color: rgba(230, 126, 34, 0.4);
+  box-shadow: 0 14px 28px rgba(47, 58, 69, 0.12);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.print-fab svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 main {

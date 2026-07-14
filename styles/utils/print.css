@@ -1,4 +1,12 @@
 @media print {
+  .section-bookmarks {
+    display: none !important;
+  }
+
+  .print-fab {
+    display: none !important;
+  }
+
   /* ✅ 인쇄 컬러 최대한 화면처럼 */
   html, body {
     -webkit-print-color-adjust: exact;
@@ -12,10 +20,12 @@
 
   body {
     padding: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
 
   .print-wrapper {
-    padding: 0 16mm; /* 좌우 여백 */
+    padding: 0 6mm; /* 좌우 여백 최소화 */
   }
 
   /* ✅ 기본 링크: 화면처럼 파란색 + 밑줄 없음 */
@@ -69,6 +79,6 @@
   /* ✅ 페이지가 나뉠 때마다 위/아래 공간 확보 */
   @page {
     size: A4;
-    margin: 18mm 14mm; /* 위/아래 18mm, 좌/우 14mm */
+    margin: 14mm 8mm; /* 위/아래 14mm, 좌/우 8mm */
   }
 }

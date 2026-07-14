@@ -14,6 +14,23 @@
 </head>
 
 <body class="goorm-sans-font">
+    <aside class="section-bookmarks" aria-label="Section navigation">
+        <a href="#introduce">INTRODUCE</a>
+        <a href="#skill">SKILL</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#project">PROJECT</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#global">GLOBAL</a>
+        <a href="#etc">ETC</a>
+    </aside>
+
+    <button class="print-fab" type="button" aria-label="Print resume">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M17 7V3H7v4H5a3 3 0 0 0-3 3v5a2 2 0 0 0 2 2h2v4h12v-4h2a2 2 0 0 0 2-2v-5a3 3 0 0 0-3-3h-2zM9 5h6v2H9V5zm7 14H8v-6h8v6zm2-6a1 1 0 1 1 0-2a1 1 0 0 1 0 2z" />
+        </svg>
+    </button>
+
     <div class="print-wrapper">
 
         <!-- ==================================================
@@ -68,7 +85,7 @@
         <!-- ==================================================
          INTRODUCE / SUMMARY
     ================================================== -->
-        <section class="summary">
+        <section class="summary" id="introduce">
             <h2>INTRODUCE</h2>
 
             <p class="summary-text">
@@ -88,7 +105,7 @@
         <!-- ==================================================
          SKILLS
     ================================================== -->
-        <section class="skills">
+        <section class="skills" id="skill">
             <h2>SKILL</h2>
 
             <div class="skill-row">
@@ -120,7 +137,7 @@
         <!-- ==================================================
          EXPERIENCE
     ================================================== -->
-        <section class="experience">
+        <section class="experience" id="experience">
             <h2>EXPERIENCE</h2>
 
             <!-- ✅ project-item / project-date 패턴으로 통일 -->
@@ -128,7 +145,7 @@
                 <div>
                     <div class="nts-status">
                         <h3>Nein to Sick</h3>
-                        <p class="status">| 개발 팀장</p>
+                        <p class="status">| 백엔드 개발 리드</p>
                     </div>
                     <p class="desc">Startup (초기 멤버)</p>
                 </div>
@@ -184,7 +201,7 @@
         <!-- ==================================================
          PROJECTS
     ================================================== -->
-        <section class="projects">
+        <section class="projects" id="project">
             <h2>PROJECT</h2>
 
             <article class="project">
@@ -476,7 +493,7 @@
         <!-- ==================================================
          EDUCATION
     ================================================== -->
-        <section class="education">
+        <section class="education" id="education">
             <h2>EDUCATION</h2>
 
             <div class="edu-item second-item">
@@ -498,7 +515,7 @@
         <!-- ==================================================
   GLOBAL EXPERIENCE
 ================================================== -->
-        <section class="global">
+        <section class="global" id="global">
             <h2>GLOBAL EXPERIENCE</h2>
 
             <div class="global-item">
@@ -538,7 +555,7 @@
         <!-- ==================================================
          EXTRAS
     ================================================== -->
-        <section class="extras">
+        <section class="extras" id="etc">
             <h2>ETC</h2>
 
             <!-- 교육 -->
@@ -564,19 +581,11 @@
 
             <!-- 자격 -->
             <div class="extra-block">
-                <h3>어학/자격</h3>
+                <h3>자격</h3>
                 <ul class="extra-list">
                     <li>
                         <span class="title">TOEIC Speaking IH</span>
                         <span class="date">2025.08.30</span>
-                    </li>
-                    <li>
-                        <span class="title">SQL 개발자</span>
-                        <span class="date">2026.06.19</span>
-                    </li>
-                    <li>
-                        <span class="title">정보처리기사</span>
-                        <span class="date">2026.06.12</span>
                     </li>
                     <li>
                         <span class="title">네트워크관리사 2급</span>
@@ -676,6 +685,68 @@
 
 
     </div>
+
+    <script>
+        const bookmarkNav = document.querySelector(".section-bookmarks");
+        const printButton = document.querySelector(".print-fab");
+        const bookmarkLinks = document.querySelectorAll(".section-bookmarks a");
+        const observedSections = [...bookmarkLinks]
+            .map((link) => document.querySelector(link.getAttribute("href")))
+            .filter(Boolean);
+        const introduceSection = document.querySelector("#introduce");
+
+        const setActiveBookmark = (sectionId) => {
+            bookmarkLinks.forEach((link) => {
+                const isActive = link.getAttribute("href") === `#${sectionId}`;
+                link.classList.toggle("active", isActive);
+                link.setAttribute("aria-current", isActive ? "true" : "false");
+            });
+        };
+
+        const updateActiveBookmark = () => {
+            if (!bookmarkNav || !introduceSection || observedSections.length === 0) {
+                return;
+            }
+
+            const introduceTop = introduceSection.getBoundingClientRect().top;
+            const shouldHideBookmarks = introduceTop > window.innerHeight * 0.2;
+            bookmarkNav.classList.toggle("is-hidden", shouldHideBookmarks);
+
+            if (shouldHideBookmarks) {
+                bookmarkLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    link.setAttribute("aria-current", "false");
+                });
+                return;
+            }
+
+            const activationLine = window.innerHeight * 0.28;
+            let currentSection = observedSections[0];
+
+            observedSections.forEach((section) => {
+                const { top } = section.getBoundingClientRect();
+
+                if (top <= activationLine) {
+                    currentSection = section;
+                }
+            });
+
+            if (currentSection) {
+                setActiveBookmark(currentSection.id);
+            }
+        };
+
+        window.addEventListener("scroll", updateActiveBookmark, { passive: true });
+        window.addEventListener("resize", updateActiveBookmark);
+
+        if (printButton) {
+            printButton.addEventListener("click", () => window.print());
+        }
+
+        if (observedSections.length > 0) {
+            updateActiveBookmark();
+        }
+    </script>
 </body>
 
 </html>
