@@ -1,4 +1,12 @@
 @media print {
+  .screen-only {
+    display: none !important;
+  }
+
+  .project.is-excluded {
+    display: none !important;
+  }
+
   .section-bookmarks {
     display: none !important;
   }
