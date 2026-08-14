@@ -1,0 +1,46 @@
+.cover-letter h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.cover-letter-content h3 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#cover-letter-text {
+    color: #222;
+}
+
+.cover-letter-subtitle {
+    margin: 20px 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #222;
+}
+
+.cover-letter-paragraph {
+    margin: 0 0 14px;
+    padding: 0;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #333;
+}
+
+.cover-letter-line {
+    display: block;
+    text-indent: 1em;
+}
+
+@media print {
+    .cover-letter {
+        break-before: page;
+        page-break-before: always;
+    }
+}

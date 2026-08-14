@@ -20,6 +20,7 @@
 @import url("./sections/education.css");
 @import url("./sections/extras.css");
 @import url("./sections/global.css");
+@import url("./sections/cover_letter.css");
 
 /* utils */
 @import url("./utils/responsive.css");

@@ -86,4 +86,42 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.project-details li { margin: 10px 0 10px; }
+.project-details li { margin: 10px 0 10px; line-height: 1.5; }
+
+/* 프로젝트 성격을 한눈에 보여주는 상단 라벨 */
+.projects .project-kicker {
+  display: inline-block;
+
+  margin: 0 0 5px 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  color: #777;
+  background: transparent;
+
+  letter-spacing: -0.2px;
+}
+
+/* 프로젝트 자체에 대한 한 줄 설명 */
+.projects .project-description {
+  margin: 4px 5px 10px 5px;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #717171;
+}
+
+/* 프로젝트 사이 구분 강화 */
+.projects .project + .project {
+  margin-top: 38px;
+}
+
+/* 타이틀과 라벨 간격 */
+.projects .project-kicker + .project-item {
+  margin-top: 1px;
+}
